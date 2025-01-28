@@ -33,10 +33,6 @@
         background-color: green;
     }
 
-    .play-bar {
-        background-color: blue;
-    }
-
     .content {
         background-color: black;
 
@@ -60,6 +56,19 @@
             min-height: 100px;
             background-color: #8d0297;
 
+        }
+    }
+
+    .play-bar {
+        background-color: blue;
+
+        .left,
+        .right {
+            background-color: gray;
+        }
+
+        .center {
+            background-color: burlywood;
         }
     }
 }
