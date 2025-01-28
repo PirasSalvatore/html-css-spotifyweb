@@ -1,5 +1,56 @@
+/* #region commons*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+.debug {
+
+    .sidebar {
+        background-color: rebeccapurple;
+    }
+
+    .upgrade {
+        background-color: green;
+    }
+
+    .play-bar {
+        background-color: blue;
+    }
+}
+
+/* #endregion commons*/
+
+/* #region utily*/
+
+/* #endregion utily*/
+
+/* #region main*/
+
+.wrapper {
+    display: flex;
+}
+
+.sidebar {
+    order: -1;
+    width: 50px;
+    height: calc(100vh - 90px);
+}
+
+.upgrade {
+    height: 90px;
+    width: calc(100vw - 50px);
+}
+
+/* #endregion main*/
+
+/* #region footer*/
+
+.play-bar {
+    height: 90px;
+    width: 100vw;
+}
+
+/* #endregion footer*/
