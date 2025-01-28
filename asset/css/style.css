@@ -168,6 +168,20 @@
 .play-bar {
     height: var(--height-footer);
     width: var(--width-footer);
+
+    display: flex;
+
+    .left,
+    .right {
+        flex-grow: 1;
+        max-width: 230px;
+    }
+
+    .center {
+        flex-grow: 2;
+        max-width: 980px;
+    }
+
 }
 
 /* #endregion footer*/
