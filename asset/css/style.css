@@ -19,6 +19,22 @@
     .play-bar {
         background-color: blue;
     }
+
+    .content {
+        background-color: black;
+    }
+}
+
+:root {
+
+    /* sizes variable */
+    --height-header: 90px;
+    --height-footer: 90px;
+    --width-footer: 100vw;
+    --width-sidebar: 50px;
+
+    /*color variable*/
+
 }
 
 /* #endregion commons*/
@@ -34,14 +50,23 @@
 }
 
 .sidebar {
-    order: -1;
-    width: 50px;
-    height: calc(100vh - 90px);
+    width: var(--width-sidebar);
+    height: calc(100vh - var(--height-footer));
+}
+
+.container {
+    width: calc(100vw - var(--width-sidebar));
+    height: calc(100vh - var(--height-footer));
 }
 
 .upgrade {
-    height: 90px;
-    width: calc(100vw - 50px);
+    height: var(--height-header);
+    width: calc(100vw - var(--width-sidebar));
+}
+
+.content {
+    height: calc(100vh - (var(--height-footer) + var(--height-header)));
+    width: calc(100vw - var(--width-sidebar));
 }
 
 /* #endregion main*/
@@ -49,8 +74,21 @@
 /* #region footer*/
 
 .play-bar {
-    height: 90px;
-    width: 100vw;
+    height: var(--height-footer);
+    width: var(--width-footer);
 }
 
 /* #endregion footer*/
+
+/* #region responsive*/
+
+@media screen and (min-width: 640px) {
+
+    :root {
+
+        --width-sidebar: 230px;
+    }
+
+}
+
+/* #endregion responsive*/
