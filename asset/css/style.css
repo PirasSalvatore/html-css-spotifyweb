@@ -1,15 +1,32 @@
+/* #region import*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* #endregion import*/
+
 /* #region commons*/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", serif;
 }
 
 .debug {
 
     .sidebar {
         background-color: rebeccapurple;
+
+        .up {
+            min-height: 50px;
+            background-color: white;
+        }
+
+        .down {
+            min-height: 50px;
+            background-color: yellow;
+        }
     }
 
     .upgrade {
@@ -34,12 +51,23 @@
     --width-sidebar: 50px;
 
     /*color variable*/
+    --sf-primary-lighter: #ffffff;
+    --sf-primary-light: #77797e;
+    --sf-primary-dark: #141922;
+    --sf-primary-darker: #000000;
+    --sf-secondary-light: #a3a3a3;
+    --sf-secondary-dark: #282828;
+    --sf-secondary-darker: #080b12;
 
 }
 
 /* #endregion commons*/
 
 /* #region utily*/
+
+.unstyle {
+    list-style: none;
+}
 
 /* #endregion utily*/
 
@@ -52,6 +80,22 @@
 .sidebar {
     width: var(--width-sidebar);
     height: calc(100vh - var(--height-footer));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .up {
+        width: 100%;
+
+        .playlist {
+            display: none;
+        }
+    }
+
+    .down {
+        width: 100%;
+
+    }
 }
 
 .container {
@@ -88,6 +132,20 @@
 
         --width-sidebar: 230px;
     }
+
+    /* #region sidebar*/
+
+    .sidebar {
+        .up {
+            .playlist {
+                display: block;
+            }
+        }
+
+    }
+
+    /* #endregion sidebar*/
+
 
 }
 
