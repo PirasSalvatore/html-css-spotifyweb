@@ -39,6 +39,28 @@
 
     .content {
         background-color: black;
+
+        .category {
+            min-height: 100px;
+            background-color: #e60505;
+        }
+
+        .recently {
+            min-height: 100px;
+            background-color: #60d037;
+        }
+
+        .crate-for {
+            min-height: 100px;
+            background-color: #2ba4c6;
+
+        }
+
+        .popular {
+            min-height: 100px;
+            background-color: #8d0297;
+
+        }
     }
 }
 
@@ -98,20 +120,46 @@
     }
 }
 
+/* end sidebar */
+
 .container {
     width: calc(100vw - var(--width-sidebar));
     height: calc(100vh - var(--height-footer));
 }
 
+/* end container */
+
+
 .upgrade {
     height: var(--height-header);
     width: calc(100vw - var(--width-sidebar));
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+
 }
+
+/* end upgrade */
+
 
 .content {
     height: calc(100vh - (var(--height-footer) + var(--height-header)));
     width: calc(100vw - var(--width-sidebar));
+    overflow-y: auto;
+
+    .category {}
+
+    .recently {}
+
+    .crate-for {}
+
+    .popular {}
 }
+
+/* end content */
+
 
 /* #endregion main*/
 
