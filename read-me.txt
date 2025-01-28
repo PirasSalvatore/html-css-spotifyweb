@@ -1,0 +1,6 @@
+to do list
+
+- creare macrostruttura a blocchi mobile first | entro fine mattina
+- rendere respondive la macrostruttura | entro fine giornata
+- inserire i dettagli partendo dalla nav laterale | entro giornata del 29/01
+- rifinire i dettagli responsive | finire per la consegna
