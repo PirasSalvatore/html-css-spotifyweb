@@ -92,6 +92,10 @@
 
 }
 
+img {
+    width: 100%;
+}
+
 /* #endregion commons*/
 
 /* #region utily*/
@@ -111,12 +115,34 @@
 .sidebar {
     width: var(--width-sidebar);
     height: calc(100vh - var(--height-footer));
+    background-color: var(--sf-primary-darker);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     .up {
         width: 100%;
+
+        .logo {
+            padding: 0.6rem;
+
+        }
+
+        .menu {
+            max-height: 110px;
+
+            li {
+                text-align: center;
+
+                img {
+                    width: 30px;
+                }
+
+                span {
+                    display: none;
+                }
+            }
+        }
 
         .playlist {
             display: none;
@@ -125,6 +151,30 @@
 
     .down {
         width: 100%;
+        max-height: 80px;
+
+        .install {
+            text-align: center;
+            padding: 0.5rem;
+
+            img {
+                width: 20px;
+            }
+        }
+
+        .account {
+            text-align: center;
+            padding: 0.1rem;
+
+            a {
+
+                img {
+                    background-color: var(--sf-primary-light);
+                    border-radius: 50%;
+                    width: 20px;
+                }
+            }
+        }
 
     }
 }
