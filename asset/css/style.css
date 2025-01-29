@@ -302,15 +302,13 @@ img {
                     a {
                         display: flex;
                         align-items: center;
-                        width: 100%;
+                        text-decoration: none;
                     }
 
                     span {
                         display: inline-block;
-                        text-decoration: none;
                         color: var(--sf-secondary-light);
-                        vertical-align: text-bottom;
-
+                        padding-left: 0.5rem;
                     }
                 }
             }
@@ -318,6 +316,7 @@ img {
             .playlist {
                 display: block;
                 padding-left: 1rem;
+                padding-top: 1rem;
 
                 h4 {
                     text-transform: uppercase;
@@ -338,6 +337,40 @@ img {
                     }
                 }
 
+            }
+        }
+
+        .down {
+
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: var(--sf-secondary-light);
+            }
+
+            img {
+                margin-right: 0.5rem;
+            }
+
+            span {
+                display: block;
+            }
+
+            .install {
+                a {
+                    padding-bottom: 1rem;
+                    border-bottom: 0.2px solid;
+                }
+            }
+
+            .account {
+                padding: 0.5rem;
+
+                span {
+                    color: var(--sf-primary-lighter);
+                    font-weight: 700;
+                }
             }
         }
 
