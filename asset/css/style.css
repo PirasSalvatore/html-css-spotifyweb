@@ -105,6 +105,12 @@ img {
     list-style: none;
 }
 
+.btn {
+    padding: 1rem 3rem;
+    border: 1px solid var(--sf-primary-lighter);
+    border-radius: 3rem;
+}
+
 /* #endregion utily*/
 
 /* #region main*/
@@ -210,12 +216,18 @@ img {
 .upgrade {
     height: var(--height-header);
     width: calc(100vw - var(--width-sidebar));
-
     display: flex;
     justify-content: end;
     align-items: center;
+    background-color: var(--sf-primary-dark);
+    padding: 1rem;
 
-
+    .btn a {
+        text-decoration: none;
+        color: var(--sf-primary-lighter);
+        text-transform: uppercase;
+        font-weight: 700;
+    }
 }
 
 /* end upgrade */
