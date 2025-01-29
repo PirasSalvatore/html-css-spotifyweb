@@ -111,6 +111,12 @@ img {
     border-radius: 3rem;
 }
 
+.subtitle {
+    color: var(--sf-primary-light);
+    font-size: 12px;
+    font-weight: 600;
+}
+
 /* #endregion utily*/
 
 /* #region main*/
@@ -172,6 +178,7 @@ img {
     .down {
         width: 100%;
         max-height: 80px;
+        padding-left: 0.5rem;
 
         span {
             display: none;
@@ -276,15 +283,12 @@ img {
                 font-weight: 700;
                 padding: 0.5rem;
                 text-align: center;
-
-            }
-
-            .subtitle {
-                color: var(--sf-primary-light);
-                font-size: 12px;
-                font-weight: 600;
             }
         }
+    }
+
+    #popular .list-card .card .figure img {
+        border-radius: 50%;
     }
 }
 
@@ -298,6 +302,7 @@ img {
 .play-bar {
     height: var(--height-footer);
     width: var(--width-footer);
+    background-color: var(--sf-secondary-dark);
 
     display: flex;
 
@@ -366,7 +371,7 @@ img {
 
             .playlist {
                 display: block;
-                padding-left: 1rem;
+                padding-left: 1.5rem;
                 padding-top: 1rem;
 
                 h4 {
