@@ -78,7 +78,7 @@
 
     /* sizes variable */
     --height-header: 90px;
-    --height-footer: 90px;
+    --height-footer: 80px;
     --width-footer: 100vw;
     --width-sidebar: 50px;
 
@@ -109,6 +109,13 @@ img {
     padding: 1rem 3rem;
     border: 1px solid var(--sf-primary-lighter);
     border-radius: 3rem;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0.5rem;
+    text-align: center;
 }
 
 .subtitle {
@@ -277,13 +284,6 @@ img {
             align-items: center;
             min-height: 250px;
             width: calc(100% / 2 - 1rem);
-
-            .title {
-                font-size: 16px;
-                font-weight: 700;
-                padding: 0.5rem;
-                text-align: center;
-            }
         }
     }
 
@@ -303,20 +303,135 @@ img {
     height: var(--height-footer);
     width: var(--width-footer);
     background-color: var(--sf-secondary-dark);
-
+    overflow: unset;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     .left,
     .right {
         flex-grow: 1;
-        max-width: 230px;
     }
 
     .center {
         flex-grow: 2;
-        max-width: 980px;
     }
 
+    .left {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 0.4rem;
+
+        .playing {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            width: 50%;
+
+            img {
+                width: 20px;
+            }
+
+            .name-song {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                padding-left: 0.5rem;
+            }
+
+            .title {
+                color: var(--sf-primary-lighter);
+                font-size: 10px;
+                padding: 0;
+            }
+
+            .subtitle {
+                font-size: 8px;
+            }
+        }
+
+        .actions-song {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            color: var(--sf-primary-light);
+        }
+    }
+
+    .center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .bottons {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.5rem;
+            padding-top: 0.5rem;
+
+            i {
+                color: var(--sf-primary-lighter);
+            }
+        }
+
+        .bar {
+            display: flex;
+            align-items: center;
+            color: var(--sf-primary-lighter);
+
+            progress {
+                border-radius: 10px;
+                height: 5px;
+                padding: 0 0.2rem;
+            }
+
+            progress::-webkit-progress-bar {
+                background-color: var(--sf-primary-light);
+                border-radius: 10px;
+            }
+
+            progress::-webkit-progress-value {
+                background-color: var(--sf-primary-lighter);
+                border-radius: 10px;
+            }
+
+        }
+    }
+
+    .right {
+        padding: 1rem 0.5rem;
+        color: var(--sf-primary-lighter);
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        padding: 0 0.4rem;
+
+        .action-play {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 0.5rem;
+
+            progress {
+                border-radius: 10px;
+                height: 5px;
+                width: 50px;
+                padding: 0 0.2rem;
+            }
+
+            progress::-webkit-progress-bar {
+                background-color: var(--sf-primary-light);
+                border-radius: 10px;
+            }
+
+            progress::-webkit-progress-value {
+                background-color: var(--sf-primary-lighter);
+                border-radius: 10px;
+            }
+        }
+    }
 }
 
 /* #endregion footer*/
@@ -440,6 +555,17 @@ img {
     .content .list-card .card {
         width: calc(100% / 4 - 1rem);
     }
+
+    .play-bar .left {
+        max-width: var(--width-sidebar);
+
+        .actions-song {
+            flex-direction: row;
+            gap: 0.75rem;
+        }
+    }
+
+
 }
 
 @media screen and (min-width: 992px) {
