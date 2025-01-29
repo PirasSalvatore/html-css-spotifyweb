@@ -556,7 +556,8 @@ img {
         width: calc(100% / 4 - 1rem);
     }
 
-    .play-bar .left {
+    .play-bar .left,
+    .play-bar .right {
         max-width: var(--width-sidebar);
 
         .actions-song {
