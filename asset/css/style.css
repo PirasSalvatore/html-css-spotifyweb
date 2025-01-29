@@ -11,6 +11,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", serif;
+    transition: all 500ms;
 }
 
 .debug {
@@ -119,12 +120,24 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: var(--sf-secondary-light);
+    overflow-y: auto;
+
 
     .up {
         width: 100%;
 
         .logo {
-            padding: 0.6rem;
+            text-align: center;
+            padding: 0.2rem;
+
+            img {
+                width: 30px;
+            }
+
+            .logo-lg {
+                display: none;
+            }
 
         }
 
@@ -132,10 +145,11 @@ img {
             max-height: 110px;
 
             li {
-                text-align: center;
+                width: 100%;
 
-                img {
-                    width: 30px;
+                .img {
+                    padding-left: 0.7rem;
+                    width: 40px;
                 }
 
                 span {
@@ -153,6 +167,10 @@ img {
         width: 100%;
         max-height: 80px;
 
+        span {
+            display: none;
+        }
+
         .install {
             text-align: center;
             padding: 0.5rem;
@@ -164,7 +182,7 @@ img {
 
         .account {
             text-align: center;
-            padding: 0.1rem;
+            padding: 0.2rem;
 
             a {
 
@@ -247,19 +265,79 @@ img {
 
 /* #region responsive*/
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 600px) {
 
     :root {
-
         --width-sidebar: 230px;
     }
 
     /* #region sidebar*/
 
     .sidebar {
+
         .up {
+
+            .logo {
+                padding: 1rem;
+
+                img {
+                    width: 150px;
+                }
+
+                .logo-sm {
+                    display: none;
+                }
+
+                .logo-lg {
+                    display: block;
+                }
+            }
+
+            .menu {
+
+                li {
+                    padding-left: 0.5rem;
+                    padding-bottom: 0.2rem;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                    }
+
+                    span {
+                        display: inline-block;
+                        text-decoration: none;
+                        color: var(--sf-secondary-light);
+                        vertical-align: text-bottom;
+
+                    }
+                }
+            }
+
             .playlist {
                 display: block;
+                padding-left: 1rem;
+
+                h4 {
+                    text-transform: uppercase;
+                    color: var(--sf-primary-lighter);
+                }
+
+                li {
+                    padding: 0.5rem 0;
+                }
+
+                li:first-child {
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        font-size: 50px;
+                        padding-right: 0.5rem;
+                    }
+                }
+
             }
         }
 

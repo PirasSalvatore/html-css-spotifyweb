@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html-css-spotifyweb</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./asset/css/style.css">
 
 </head>
@@ -21,33 +25,56 @@
                 <div class="up">
 
                     <div class="logo">
-                        <img src="./asset/img/logo-small.svg" alt="">
+                        <img src="./asset/img/logo-small.svg" alt="" class="logo-sm">
+                        <img src="./asset/img/logo.svg" alt="" class="logo-lg">
                     </div>
 
                     <ul class="menu unstyle">
                         <li>
                             <a href="#">
-                                <img src="./asset/img/home.svg" alt="">
+                                <div class="img">
+                                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
+                                            fill="#ffffff" />
+                                    </svg>
+                                </div>
                                 <span>Home</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./asset/img/search.svg" alt="">
-                                <span>Home</span>
+                                <div class="img">
+                                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
+                                            fill="#ffffff" fill-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <span>Cerca</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <img src="./asset/img/libreria.svg" alt="">
-                                <span>Home</span>
+                                <div class="img">
+                                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
+                                            fill="#ffffff" />
+                                    </svg>
+                                </div>
+                                <span>La tua libreria</span>
                             </a>
                         </li>
                     </ul>
 
                     <div class="playlist">
-                        <ul class="unsyle">
-                            <li>Nome Playlist</li>
+                        <h4>Playlist</h4>
+                        <ul class="unstyle">
+                            <li>
+                                <i class="fa-solid fa-square-plus"></i>
+                                <span>Crea Playlist</span>
+                            </li>
                             <li>Nome Playlist</li>
                             <li>Nome Playlist</li>
                             <li>Nome Playlist</li>
@@ -63,11 +90,13 @@
                     <div class="install">
                         <a href="#">
                             <img src="./asset/img/download.svg" alt="">
+                            <span>Installa app</span>
                         </a>
                     </div>
                     <div class="account">
                         <a href="#">
                             <img src="./asset/img/profile.svg" alt="">
+                            <span>John Doe</span>
                         </a>
                     </div>
                 </div>
