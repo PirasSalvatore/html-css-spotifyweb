@@ -428,6 +428,11 @@ img {
 
             .subtitle {
                 font-size: 8px;
+
+                :hover {
+                    color: var(--sf-primary-lighter);
+                    font-size: 10px;
+                }
             }
         }
 
@@ -478,16 +483,21 @@ img {
                 border-radius: 10px;
                 height: 5px;
                 padding: 0 0.2rem;
-            }
 
-            progress::-webkit-progress-bar {
-                background-color: var(--sf-primary-light);
-                border-radius: 10px;
-            }
+                &::-webkit-progress-bar {
+                    background-color: var(--sf-primary-light);
+                    border-radius: 10px;
+                }
 
-            progress::-webkit-progress-value {
-                background-color: var(--sf-primary-lighter);
-                border-radius: 10px;
+                &::-webkit-progress-value {
+                    background-color: var(--sf-primary-lighter);
+                    border-radius: 10px;
+
+                    &:hover {
+                        border-right: 5px solid var(--sf-primary-select);
+                    }
+                }
+
             }
 
         }
