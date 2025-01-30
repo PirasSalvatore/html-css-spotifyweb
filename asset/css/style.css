@@ -174,6 +174,16 @@ img {
                 span {
                     display: none;
                 }
+
+                :hover {
+                    color: var(--sf-primary-lighter);
+                    font-size: 20px;
+                }
+            }
+
+            li:first-child {
+
+                border-left: 4px solid green;
             }
         }
 
@@ -198,6 +208,11 @@ img {
             img {
                 width: 20px;
             }
+
+            :hover {
+                color: var(--sf-primary-lighter);
+                font-size: 20px;
+            }
         }
 
         .account {
@@ -212,9 +227,16 @@ img {
                     width: 20px;
                 }
             }
+
+            :hover {
+                color: var(--sf-primary-lighter);
+                font-size: 20px;
+            }
         }
 
     }
+
+
 }
 
 /* end sidebar */
@@ -241,6 +263,12 @@ img {
         color: var(--sf-primary-lighter);
         text-transform: uppercase;
         font-weight: 700;
+
+        &:hover {
+            color: var(--sf-primary-lighter);
+            font-size: 16px;
+            font-weight: 900;
+        }
     }
 }
 
@@ -268,6 +296,18 @@ img {
                 color: var(--sf-secondary-light);
                 text-transform: uppercase;
                 font-size: 14px;
+
+                &:hover {
+                    color: var(--sf-primary-lighter);
+                    font-size: 16px;
+                    font-weight: 900;
+                }
+            }
+
+            li:first-child {
+                span {
+                    border-bottom: 2px solid green;
+                }
             }
         }
     }
@@ -494,10 +534,6 @@ img {
                     color: var(--sf-primary-lighter);
                 }
 
-                li {
-                    padding: 0.5rem 0;
-                }
-
                 li:first-child {
                     display: flex;
                     align-items: center;
@@ -505,6 +541,15 @@ img {
                     i {
                         font-size: 50px;
                         padding-right: 0.5rem;
+                    }
+                }
+
+                li {
+                    padding: 0.5rem 0;
+
+                    &:hover {
+                        color: var(--sf-primary-lighter);
+                        font-size: 20px;
                     }
                 }
 
@@ -559,11 +604,11 @@ img {
     .play-bar .left,
     .play-bar .right {
         max-width: var(--width-sidebar);
+    }
 
-        .actions-song {
-            flex-direction: row;
-            gap: 0.75rem;
-        }
+    .play-bar .left .actions-song {
+        flex-direction: row;
+        gap: 0.75rem;
     }
 
 
