@@ -11,7 +11,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", serif;
-    transition: all 500ms;
+    transition: all 300ms;
 }
 
 .debug {
@@ -99,6 +99,10 @@
 
 }
 
+body footer {
+    overflow: hidden;
+}
+
 img {
     width: 100%;
 }
@@ -146,7 +150,16 @@ img {
     flex-direction: column;
     justify-content: space-between;
     color: var(--sf-secondary-light);
+
+
+    /* sidebar scollabbile ma nascondo la scrollbar*/
     overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
 
 
     .up {
@@ -171,10 +184,12 @@ img {
 
             li {
                 width: 100%;
+                border-left: 4px solid transparent;
+                padding-left: 0.2rem;
 
                 .img {
-                    padding-left: 0.7rem;
-                    width: 40px;
+                    padding-left: 0.3rem;
+                    width: 30px;
                 }
 
                 span {
@@ -201,7 +216,6 @@ img {
     .down {
         width: 100%;
         max-height: 80px;
-        padding-left: 0.5rem;
 
         span {
             display: none;
@@ -209,7 +223,11 @@ img {
 
         .install {
             text-align: center;
-            padding: 0.5rem;
+            padding-bottom: 0.3rem;
+
+            a {
+                text-align: center;
+            }
 
             img {
                 width: 20px;
@@ -223,7 +241,6 @@ img {
 
         .account {
             text-align: center;
-            padding: 0.2rem;
 
             a {
 
@@ -250,6 +267,7 @@ img {
 .container {
     width: calc(100vw - var(--width-sidebar));
     height: calc(100vh - var(--height-footer));
+    overflow-y: scroll;
 }
 
 /* end container */
@@ -258,6 +276,12 @@ img {
 .upgrade {
     height: var(--height-header);
     width: calc(100vw - var(--width-sidebar));
+
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+
     display: flex;
     justify-content: end;
     align-items: center;
@@ -284,7 +308,7 @@ img {
 .content {
     height: calc(100vh - (var(--height-footer) + var(--height-header)));
     width: calc(100vw - var(--width-sidebar));
-    overflow-y: auto;
+    overflow-y: scroll;
     background-color: var(--sf-secondary-darker);
     color: var(--sf-primary-lighter);
     padding: 1rem;
@@ -614,8 +638,6 @@ img {
             .menu {
 
                 li {
-                    padding-left: 0.5rem;
-                    padding-bottom: 0.2rem;
 
                     a {
                         display: flex;
@@ -633,8 +655,8 @@ img {
 
             .playlist {
                 display: block;
-                padding-left: 1.5rem;
-                padding-top: 1rem;
+                padding: 2rem 1rem;
+
 
                 h4 {
                     text-transform: uppercase;
@@ -664,6 +686,7 @@ img {
         }
 
         .down {
+            padding-left: 0.7rem;
 
             a {
                 display: flex;
@@ -688,7 +711,7 @@ img {
             }
 
             .account {
-                padding: 0.5rem;
+                padding: 0.5rem 0;
 
                 span {
                     color: var(--sf-primary-lighter);

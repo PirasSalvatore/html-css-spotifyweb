@@ -5,3 +5,11 @@ to do list
 - creare microstrutture | entro mattinata del 29/01 | mezzo pomeriggio 1° giorno
 - inserire i dettagli partendo dalla nav laterale | entro giornata del 29/01
 - rifinire i dettagli responsive | finire per la consegna
+
+
+da sistemare
+
+sidebar. overflow-y =auto  fatto
+body overflow: hiden  ???? non capisco perchè devo mettere hidden al body! // ho applicato la regala anche ful footer perchè quando rimpisciolisci la finestra orizontalmente il layout si rompeva.
+sidebar decentrato || centrato usando il margin nelle icone e aggiustando il padding nel resto del contenuto
+html -> da commentare
